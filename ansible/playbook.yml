@@ -1,0 +1,16 @@
+- name: Deploy customer segmentation code
+  hosts: windows_host
+  gather_facts: yes
+  
+  tasks:
+    - name: Install dependencies
+      include_role:
+        name: install_dependencies
+
+    - name: Clone the repository
+      include_role:
+        name: clone_repo
+
+    - name: Set up the environment and run code
+      include_role:
+        name: setup_environment

@@ -1,0 +1,8 @@
+- name: Clone the GitHub repository
+  win_shell: |
+    if (!(Test-Path -Path "C:\repos")) {
+      New-Item -ItemType Directory -Force -Path "C:\repos"
+    }
+    git clone https://github.com/ayesha-qy/AI-Project.git C:\repos\customer-segmentation
+  args:
+    executable: cmd

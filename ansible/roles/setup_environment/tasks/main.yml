@@ -1,0 +1,16 @@
+- name: Set up Python virtual environment
+  win_shell: |
+    cd C:\repos\customer-segmentation
+    python -m venv venv
+    .\venv\Scripts\activate
+    pip install -r requirements.txt
+  args:
+    executable: cmd
+
+- name: Run customer segmentation script
+  win_shell: |
+    cd C:\repos\customer-segmentation
+    .\venv\Scripts\activate
+    python segmentation.py
+  args:
+    executable: cmd

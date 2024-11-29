@@ -1,0 +1,10 @@
+all:
+  hosts:
+    windows_host:
+      ansible_host: 192.168.2.23  # Replace with your Windows IP
+      ansible_user: janvi  # Replace with your username
+      ansible_password: 2122
+      ansible_connection: winrm
+      ansible_winrm_transport: basic  # Or negotiate if applicable
+      ansible_winrm_port: 5985
+      ansible_winrm_server_cert_validation: ignore

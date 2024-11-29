@@ -1,0 +1,9 @@
+- name: Install Python via Chocolatey
+  win_chocolatey:
+    name: python
+    state: present
+
+- name: Install Git via Chocolatey
+  win_chocolatey:
+    name: git
+    state: present
